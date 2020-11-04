@@ -1,0 +1,143 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#: .\templates\almaty.html:232
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-11-02 14:30+0600\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n!=1);\n"
+
+#: .\templates\courses.html:209 .\templates\courses_info.html:104
+#: .\templates\index.html:169
+msgid "Главная"
+msgstr ""
+
+#: .\templates\courses.html:213 .\templates\courses_info.html:108
+#: .\templates\index.html:174
+msgid "Курсы"
+msgstr ""
+
+#: .\templates\courses.html:260 .\templates\courses_info.html:147
+msgid "Курсы повышения квалификации"
+msgstr ""
+
+#: .\templates\courses.html:262
+msgid ""
+"Курсы aкадемии ELAB.ASIA одобрены НАЦИОНАЛЬНОЙ АКАДЕМИЕЙ ОБРАЗОВАНИЯ им. Ы."
+"Алтынсарина.  После прохождения курса, учитель получает сертификат "
+"установленного образца. Будьте вместе с нами. #бізбіргеміз"
+msgstr ""
+
+#: .\templates\courses.html:263 .\templates\courses_info.html:150
+#: .\templates\index.html:298
+msgid "Записаться на курсы"
+msgstr ""
+
+#: .\templates\courses.html:304
+msgid "ЗАПИСАТЬСЯ"
+msgstr ""
+
+#: .\templates\courses_info.html:149
+msgid ""
+"Курсы aкадемии ELAB.ASIA одобрены НАЦИОНАЛЬНОЙ АКАДЕМИЕЙ ОБРАЗОВАНИЯ им. Ы."
+"Алтынсарина. После прохождения курса, учитель получает сертификат "
+"установленного образца. Будьте вместе с нами. #бізбіргеміз"
+msgstr ""
+
+#: .\templates\fransh.html:283 .\templates\index.html:238
+msgid "Добро пожаловать"
+msgstr ""
+
+#: .\templates\fransh.html:286
+msgid "Новая прибыльная ниша."
+msgstr ""
+
+#: .\templates\fransh.html:290
+msgid "Бизнес, который не требует крупных вложений."
+msgstr ""
+
+#: .\templates\fransh.html:294
+msgid "Лучшее направление в сфере получения"
+msgstr ""
+
+#: .\templates\fransh.html:298
+msgid "цифровых знаний"
+msgstr ""
+
+#: .\templates\fransh.html:341 .\templates\index.html:296
+msgid "Добро пожаловать в мир новых знаний"
+msgstr ""
+
+#: .\templates\fransh.html:342 .\templates\index.html:297
+msgid ""
+"В современном стремительно  меняющемся мире всегда есть место личностному "
+"росту, получению новых знаний и движению в ногу со временем. Курсы нашей "
+"Академии позволят   Вам  работать в мире инновационных технологий, открывать "
+"для себя новые возможности в разных профессиях. Наши курсы одобрены "
+"НАЦИОНАЛЬНОЙ АКАДЕМИЕЙ ОБРАЗОВАНИЯ им. Ы.Алтынсарина. По окончании курсов Вы "
+"получаете  сертификат установленного образца, согласованный с Министерством "
+"науки и образования РК . Будьте вместе с нами. #бізбіргеміз"
+msgstr ""
+
+#: .\templates\index.html:180
+msgid "Наша команда"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\views\templates\default_urlconf.html:7
+msgid "Django: the Web framework for perfectionists with deadlines."
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\views\templates\default_urlconf.html:346
+#, python-format
+msgid ""
+"View <a href=\"https://docs.djangoproject.com/en/%(version)s/releases/\" "
+"target=\"_blank\" rel=\"noopener\">release notes</a> for Django %(version)s"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\views\templates\default_urlconf.html:368
+msgid "The install worked successfully! Congratulations!"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\views\templates\default_urlconf.html:369
+#, python-format
+msgid ""
+"You are seeing this page because <a href=\"https://docs.djangoproject.com/en/"
+"%(version)s/ref/settings/#debug\" target=\"_blank\" rel=\"noopener"
+"\">DEBUG=True</a> is in your settings file and you have not configured any "
+"URLs."
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\views\templates\default_urlconf.html:384
+msgid "Django Documentation"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\views\templates\default_urlconf.html:385
+msgid "Topics, references, &amp; how-to’s"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\views\templates\default_urlconf.html:396
+msgid "Tutorial: A Polling App"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\views\templates\default_urlconf.html:397
+msgid "Get started with Django"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\views\templates\default_urlconf.html:408
+msgid "Django Community"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\views\templates\default_urlconf.html:409
+msgid "Connect, get help, or contribute"
+msgstr ""

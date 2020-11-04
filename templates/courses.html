@@ -1,0 +1,491 @@
+{% load static %}
+{% load i18n static %}
+<!DOCTYPE html>
+<html>
+<head>
+<title>ELAB ASIA</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" href="https://elab.asia/img/icon.png">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap">
+<link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+<link rel="stylesheet" href="{% static 'css/mdb.min.css' %}">
+<link rel="stylesheet" href="{% static 'css/style.css' %}">
+
+<script type="text/javascript" src="{% static 'js/jquery.min.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/popper.min.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/bootstrap.min.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/mdb.min.js' %}"></script>
+</head>
+
+    <body class="body_hide">
+		<script >
+        setTimeout(function(){
+  document.body.classList.add('body_visible');
+}, 300);
+      </script>
+
+<style>
+    html{
+        scroll-behavior: smooth;
+    }
+
+.body_hide {
+  opacity: 0;
+  transition: .9s opacity ease-in-out;
+}
+.body_visible {
+  opacity: 1;
+}
+
+			.blue-grey.lighten-5 {
+    background-color: #000000 !important;
+}
+	.anim {
+	visibility: visible;
+    animation-name: fadeInLeft;
+    animation-delay: 0.3s;
+	}
+
+	.zapis {
+	position: relative !important;
+	font-size: 20px;
+    font-family: inherit;	color: #fff;
+	background: linear-gradient(to left, #1b8dab, #0b786f, #1b8dab);
+	text-decoration: none;
+	padding: 20px 70px;
+	border-radius: 10px;
+	background-size: 200%;
+	transition: .5s;
+    color: #fff;
+    cursor: pointer;
+    text-decoration: none;
+    border-radius: 10px;
+    text-transform: uppercase;
+    font-weight: 400;
+    text-align: right;
+    letter-spacing: 0;
+    width: 30%;
+    height: 40px;
+    left: 250px;
+    top: -25px;
+    z-index: 1;
+    overflow: hidden;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    margin-left: 13%;
+	}
+
+
+.zapis:hover {
+  background-position: right;
+}
+
+.btn {
+  display: block;
+  padding: 1em 2em;
+  background: #0b786f;
+  color: #fff;
+  border: 1px solid #fff;
+  outline: 0;
+  text-transform: uppercase;
+  cursor: pointer;
+  -webkit-transition: 0.3s ease;
+  transition: 0.3s ease;
+  -webkit-appearance: none;
+}
+.btn:hover {
+  background: #fff;
+  color: #da513d;
+}
+.modal {
+  opacity: 0;
+  visibility: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.7);
+  -webkit-transition: 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
+}
+.modal__box {
+  padding: 1em;
+  background: #fff;
+  box-shadow: 0 0 10px 0 rgba(0,0,0,0.2);
+  text-align: center;
+  -webkit-transition: all 0.3s cubic-bezier(0.2, 0.9, 0.3, 1.5);
+  transition: all 0.3s cubic-bezier(0.2, 0.9, 0.3, 1.5);
+  -webkit-transform: rotate(5deg) translate(-1em, 1em);
+          transform: rotate(5deg) translate(-1em, 1em);
+  border-top: 5px solid #da513d;
+  border-bottom: 5px solid #ddd;
+}
+/* modal magic */
+.btn:focus + .modal {
+  opacity: 1;
+  visibility: visible;
+}
+.btn:focus + .modal .modal__box {
+  -webkit-transform: rotate(0deg) translate(0, 0);
+          transform: rotate(0deg) translate(0, 0);
+}
+      .blue-grey.lighten-5 {
+    background-color: #000000 !important;
+}
+
+.cont{
+  text-align: -webkit-center;
+}
+
+span{
+  font-size: 20px;
+}
+
+form{
+    width: 90%;
+    text-align: center;
+    color: darkgrey;
+}
+
+input[type="submit"], input[type="reset"], input[type="button"], button, .button {
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    -ms-appearance: none;
+    appearance: none;
+    -moz-transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+    -webkit-transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+    -ms-transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+    transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+    border-radius: 2px;
+    border: 0;
+    cursor: pointer;
+    display: inline-block;
+    font-weight: 300;
+    line-height: 1.9rem;
+    padding: 0 1rem;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    white-space: nowrap;
+        margin-top: 5px;
+}
+	input[type="text"], input[type="password"], input[type="email"], select, textarea {
+    background: rgba(144, 144, 144, 0.075);
+    border-color: rgba(144, 144, 144, 0.25);
+     color: darkgrey;
+        padding: 1px 0.5rem;
+}
+    input[type="submit"],
+	input[type="reset"],
+	input[type="button"],
+	button,
+	.button {
+		background-color: #dc3545;
+		color: #ffffff ;
+	}
+
+		input[type="submit"]:hover,
+		input[type="reset"]:hover,
+		input[type="button"]:hover,
+		button:hover,
+		.button:hover {
+			background-color: #a52e3a;;
+		}
+
+		input[type="submit"]:active,
+		input[type="reset"]:active,
+		input[type="button"]:active,
+		button:active,
+		.button:active {
+			background-color: #7b2028;
+		}
+		</style>
+
+        <!-- Main navigation -->
+        <header>
+          <!--Navbar-->
+          <nav class="navbar navbar-expand-lg navbar-dark fixed-top scrolling-navbar">
+            <div class="container">
+              <a class="navbar-brand" href="index.html">
+				<img src="{% static 'assets/img/LOGO4.png' %}" alt="" class="img-fluid" style = "max-width:68px">
+                <strong style="font-weight: bold;">ELAB.ASIA</strong>
+              </a>
+              <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent-7" aria-controls="navbarSupportedContent-7" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+			   <a href = "index.html" class = "selectlang  text-right d-block d-sm-none" style="font-weight: bold;">
+                Қазақша
+              </a>
+              <div class="collapse navbar-collapse" id="navbarSupportedContent-7">
+                <ul class="navbar-nav mr-auto">
+                  <li class="nav-item">
+                    <a class="nav-link" href="{% url 'home' %}" style="font-weight: bold;">{% trans 'Главная' %}</a>
+                  </li>
+                  <li class="nav-item active">
+                    <a class="nav-link" href="#top" style="font-weight: bold;">
+                      <span class="sr-only">(current)</span>{% trans 'Курсы' %}</a>
+                  </li>
+					<li class="nav-item">
+                    <a class="nav-link" href="{% url 'flash' %}" style="font-weight: bold;">Elab FLASH</a>
+                  </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'nao' %}" style="font-weight: bold;">Курсы НАО</a>
+                  </li>
+				  <li class="nav-item d-sm-none d-md-block" style="position: fixed;
+    right: 80px;">
+                    <form action="{% url 'set_language'%}" method="post">
+                        {% csrf_token %}
+                        <input name="text" type="hidden" value="{{ redirect_to }}">
+                        <select name="language">
+                            {% get_current_language as LANGUAGE_CODE %}
+                            {% get_available_languages as LANGUAGES %}
+                            {% get_language_info_list for LANGUAGES as languages %}
+                            {% for language in languages %}
+                                <option  value="{{ language.code }}"{% if language.code == LANGUAGE_CODE %}
+                                selected{% endif %}>
+
+                                {% if language.name_local == "Қазақ" %}
+                                {{ language.name_local }}ша
+
+                                {% endif %}
+                                {% if language.name_local == "Русский" %}
+                                {{ language.name_local }}
+                                {% endif %}
+                                </option>
+                        {% endfor %}
+
+                        </select>
+                    <input type="submit", value="Перевести">
+                    </form>
+                  </li>
+                </ul>
+
+              </div>
+            </div>
+          </nav>
+          <!-- Full Page Intro -->
+          <div id = "top" class="view" style="background-image: url('https://elab.asia/img/elabmain3.jpg'); background-repeat: no-repeat; background-size: cover; background-position: center center;">
+            <!-- Mask & flexbox options-->
+            <div class="mask rgba-gradient align-items-center">
+              <!-- Content -->
+              <div class="container h-100">
+                <!--Grid row-->
+                <div class="row h-100">
+                  <!--Grid column-->
+                  <div class="col-md-12  my-auto white-text text-center wow fadeInLeft"  data-wow-delay="0.3s">
+                    <h1 class="h1-responsive font-weight-bold mt-sm-5" style="font-size: 350%;">{% trans 'Курсы повышения квалификации' %}</h1>
+                    <hr class="hr-light">
+                    <h6 class="mb-4" style="font-size: 2rem;">{% trans 'Курсы aкадемии ELAB.ASIA одобрены НАЦИОНАЛЬНОЙ АКАДЕМИЕЙ ОБРАЗОВАНИЯ им. Ы.Алтынсарина.  После прохождения курса, учитель получает сертификат установленного образца. Будьте вместе с нами. #бізбіргеміз' %}</h6>
+                    <a class="btn btn-outline-white" href = "#courses" style="font-size: 20px;">{% trans 'Записаться на курсы' %}</a>
+
+                  </div>
+
+                </div>
+                <!--Grid row-->
+              </div>
+              <!-- Content -->
+            </div>
+            <!-- Mask & flexbox options-->
+          </div>
+          <!-- Full Page Intro -->
+        </header>
+        <!-- Main navigation -->
+
+        <!--Main Layout-->
+<main id="courses">
+          <div class="container">
+      <h1 class="h1-responsive font-weight-bold my-5 text-center">Прайс-лист</h1>
+            <!--Grid row-->
+<div class="row my-3" id = "selectrow">
+<div class = "col-md-12">
+              <!-- Card deck -->
+
+<div class="card-deck">
+    {% for i in courses_list %}
+  <!-- Card -->
+  <div class="card  rgba-white-slight">
+
+  <!-- Content -->
+  <div class="text-center d-flex align-items-center py-5 px-4">
+    <div class="cont">
+      <h5 class="pink-text"><i class="fas fa-chart-pie"></i></h5>
+      <h3 class="card-title pt-2">
+    <strong><span class = "coursename">{{ i.name }}
+    </span></strong>
+    </h3>
+    <p class = "lead"><i class="fas fa-tenge"></i> {{ i.price }}</p>
+        <p class = "lead"><i class="far fa-clock"></i> {{ i.hour }}</p>
+    <p class = "lead">{{ i.description }}</p>
+      <p></p>
+
+
+    <button class="btn">{% trans 'ЗАПИСАТЬСЯ' %}</button>
+<div class="modal">
+  <div class="modal__box">
+    <p>{{ i.name }} </p>
+    <p>Внимание! На странице оплаты, в поле комментария, писать свой адрес доставки, страна, город</p>
+    <a href="{{ i.url }}" class="btn" target="_blank">Оплатить</a>
+  </div>
+</div>
+    </div>
+  </div>
+
+</div>
+    {% endfor %}
+  <!-- Card -->
+
+  <!-- Card -->
+
+
+
+
+</div></div></div>
+</div>
+        </main>
+<!-- Footer -->
+
+		<footer class="page-footer font-small blue-grey lighten-5" style="background: #000000;">
+
+  <div style="background-color: #0b786f;">
+    <div class="container">
+
+      <!-- Grid row-->
+      <div class="row py-4 d-flex align-items-center">
+
+        <!-- Grid column -->
+        <div class="col-md-6 col-lg-5 text-center text-md-left mb-4 mb-md-0">
+          <h6 class="mb-0" style="font-size: 25px; color: white; margin-left: -40px;">Будьте всегда с нами!</h6>
+        </div>
+        <!-- Grid column -->
+
+        <!-- Grid column -->
+        <div class="col-md-6 col-lg-7 text-center text-md-right">
+
+		  <!--Instagram-->
+          <a class="ins-ic">
+            <i class="fa fa-instagram white-text" style="margin-left: 20px; font-size: 50px;"> </i>
+          </a>
+          <!--youtube -->
+          <a class="li-ic">
+            <i class="fa fa-youtube white-text mr-4" style="margin-left: 20px; font-size: 50px;"> </i>
+          </a>
+          <!-- Facebook -->
+          <a class="fb-ic">
+            <i class="fa fa-facebook-f white-text mr-4" style="margin-left: 20px; font-size: 50px;"> </i>
+          </a>
+
+        </div>
+        <!-- Grid column -->
+
+      </div>
+      <!-- Grid row-->
+
+    </div>
+  </div>
+
+  <!-- Footer Links -->
+  <div class="container text-center text-md-left mt-5">
+
+    <!-- Grid row -->
+    <div class="row mt-3 dark-grey-text">
+
+      <!-- Grid column -->
+      <div class="col-md-3 col-lg-4 col-xl-3 mb-4">
+
+        <!-- Content -->
+        <h6 class="text-uppercase font-weight-bold" style="color: white; font-size: 20px;">ELAB.ASIA</h6>
+        <hr class="teal accent-3 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px; color: white;">
+        <p style="color: white;">Мир новых знаний.</p>
+
+      </div>
+      <!-- Grid column -->
+
+      <!-- Grid column -->
+      <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+
+        <!-- Links -->
+        <!--<h6 class="text-uppercase font-weight-bold">Products</h6>
+        <hr class="teal accent-3 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
+        <p>
+          <a class="dark-grey-text" href="#!">MDBootstrap</a>
+        </p>
+        <p>
+          <a class="dark-grey-text" href="#!">MDWordPress</a>
+        </p>
+        <p>
+          <a class="dark-grey-text" href="#!">BrandFlow</a>
+        </p>
+        <p>
+          <a class="dark-grey-text" href="#!">Bootstrap Angular</a>
+        </p>-->
+
+      </div>
+      <!-- Grid column -->
+
+      <!-- Grid column -->
+      <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+
+        <!-- Links -->
+        <!--<h6 class="text-uppercase font-weight-bold">Useful links</h6>
+        <hr class="teal accent-3 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
+        <p>
+          <a class="dark-grey-text" href="#!">Your Account</a>
+        </p>
+        <p>
+          <a class="dark-grey-text" href="#!">Become an Affiliate</a>
+        </p>
+        <p>
+          <a class="dark-grey-text" href="#!">Shipping Rates</a>
+        </p>
+        <p>
+          <a class="dark-grey-text" href="#!">Help</a>
+        </p>-->
+
+      </div>
+      <!-- Grid column -->
+
+      <!-- Grid column -->
+      <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+
+        <!-- Links -->
+        <h6 class="text-uppercase font-weight-bold" style="color: white; font-size: 20px;">Наши контакты</h6>
+        <hr class="teal accent-3 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
+
+        <p style="color: white;">
+          <i class="fa fa-envelope mr-3" style="color: white;"></i> elab.shakha@gmail.com</p>
+        <p style="color: white;">
+          <i class="fa fa-phone mr-3" style="color: white;"></i> + 7 (776) 149 2925 - Шахризат</p>
+
+
+      </div>
+      <!-- Grid column -->
+
+    </div>
+    <!-- Grid row -->
+
+  </div>
+  <!-- Footer Links -->
+
+  <!-- Copyright -->
+  <div class="footer-copyright text-center text-black-50 py-3" style="margin-top: 20px; color: white;"><p style="color: white;">© 2020 Copyright: Elab.Asia</p>
+  </div>
+  <!-- Copyright -->
+
+</footer>
+</body>
+</html>

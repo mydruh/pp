@@ -1,0 +1,675 @@
+{% load static %}
+{% load i18n static %}
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>ELAB ASIA</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link rel="icon" href="https://elab.asia/img/icon.png">
+		<link rel="stylesheet" href="{% static 'assets.main/css/main.css' %}" />
+		<link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+		<link rel="stylesheet" href="{% static 'css/mdb.min.css' %}">
+  		<link rel="stylesheet" href="{% static 'assets/css/style.css' %}">
+
+
+		<script type="text/javascript" src="{% static 'js/jquery.min.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/popper.min.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/bootstrap.min.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/mdb.min.js' %}"></script>
+
+	</head>
+	<body>
+
+		<style>
+
+		p {
+			font-family: sans-serif;
+}
+
+		strong {
+    	font-weight: 500;
+		color: white;
+}
+
+		section.about-section .amout-img {
+   		position: relative;
+		background: #f2f2f2;
+    	top: 50px;
+		text-align: center;
+}
+
+		section.about-section {
+    	position: relative;
+		background: #f2f2f2;
+    	padding-top: 140px;
+    	overflow: hidden;
+}
+
+			section.about-section {
+    position: relative;
+    background: #f2f2f2;
+    padding-top: 20px;
+    overflow: hidden;
+}
+
+			section.our-team::before {
+    position: absolute;
+    content: '';
+    width: 186px;
+    height: 70px;
+    background: url(.);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    right: 0;
+    top: 0;
+}
+
+			section.our-team::after {
+    position: absolute;
+    content: '';
+    width: 186px;
+    height: 70px;
+    background: url(.);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    left: 0;
+    top: 42%;
+    z-index: -1;
+}
+
+		a.btn-2:hover {
+    	transition: .5s ease;
+    	background-color: #12b3a6  !important;
+
+}
+
+		.pulse-css {
+    	width: 65px;
+    	height: 65px;
+    	border-radius: 50%;
+    	background: #d02121;
+    	position: relative;
+    	margin: 25px auto;
+    	z-index: 1;
+}
+		.pulse-css:before, .pulse-css:after {
+    	content: "";
+    	width: 65px;
+    	height: 65px;
+    	border-radius: 50%;
+    	background-color: #d02121;
+    	position: absolute;
+    	top: 0;
+    	right: 0;
+    	bottom: 0;
+    	left: 0;
+    	margin: auto;
+    	transform: scale(0.5);
+    	transform-origin: center center;
+    	-webkit-animation: pulse-btn 3s linear infinite;
+    	-moz-animation: pulse-btn 3s linear infinite;
+   	 	-ms-animation: pulse-btn 3s linear infinite;
+   	 	animation: pulse-btn 3s linear infinite;
+   	 	z-index: -1;
+}
+
+
+			@media only screen and (max-width: 1199px)
+		section.about-section::before {
+    	width: 0;
+    	height: 320px;
+}
+
+			section.about-section::before {
+    position: absolute;
+    content: '';
+    width: 350px;
+    height: 460px;
+    background: url(../img/slide/slide-element1.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    top: -25%;
+    left: -10%;
+    -webkit-animation-name: slideInnew3;
+    animation-name: slideInnew3;
+    -webkit-animation: slideInnew3 4s both alternate infinite;
+    animation: slideInnew3 4s both alternate infinite;
+    animation-duration: 6000ms;
+    animation-delay: 2s;
+    animation-timing-function: ease-in;
+}
+
+			.wrapper.style2 header p {
+    color: #999999;
+    font-size: 20px;
+}
+
+			.wrapper.style3 header p {
+    color: #999999;
+    font-size: 20px;
+}
+
+            form {
+    margin: 0 0 3rem 0;
+    height: 10px;
+    color: darkgrey;
+    text-align: center;
+    width: 100%;
+}
+			.banner > article h2 {
+    font-size: 7rem;
+    padding-top: 20px;
+    margin-bottom: 0;
+    color: #FFF;
+    font-weight: 300;
+}
+
+			ul.icons li .icon:before {
+    font-size: 30px;
+}
+			.blue-grey.lighten-5 {
+    background-color: #000000 !important;
+}
+		</style>
+
+		<!-- Header -->
+
+
+		<!-- Nav -->
+		<nav class="navbar navbar-expand-lg navbar-dark fixed-top scrolling-navbar" style="padding-bottom: 15px;">
+            <div class="container">
+              <a class="navbar-brand" href="#">
+			  <img src="{% static 'assets/img/LOGO4.png' %}" alt="" class="img-fluid" style = "max-width:68px">
+                <strong style="font-weight: bold;">ELAB.ASIA</strong>
+              </a>
+              <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent-7" aria-controls="navbarSupportedContent-7" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+
+              <div class="collapse navbar-collapse" id="navbarSupportedContent-7">
+                <ul class="navbar-nav mr-auto">
+                  <li class="nav-item">
+                    <a class="nav-link" href="{% url 'home' %}" style="font-weight: bold;">Главная</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="courses.html" style="font-weight: bold;">
+                    Курсы</a>
+                  </li>
+					<li class="nav-item">
+                    <a class="nav-link" href="{% url 'flash' %}" style="font-weight: bold;">Elab FLASH</a>
+                  </li>
+                  <li class="nav-item active">
+                    <a class="nav-link" href="#top" style="font-weight: bold;">Наша команда</a>
+                      <span class="sr-only">(current)</span>
+                  </li>
+					<li class="nav-item">
+                    <a class="nav-link" target="_blank" style="font-weight: bold;" href="{% url 'fransh' %}">Франшиза</a>
+                  </li>
+					<li class="nav-item d-sm-none d-md-block" style="position: fixed;
+    right: 120px;">
+                    				 <form action="{% url 'set_language'%}" method="post">
+                        {% csrf_token %}
+                        <input name="text" type="hidden" value="{{ redirect_to }}">
+                        <select name="language">
+                            {% get_current_language as LANGUAGE_CODE %}
+                            {% get_available_languages as LANGUAGES %}
+                            {% get_language_info_list for LANGUAGES as languages %}
+                            {% for language in languages %}
+                                <option  value="{{ language.code }}"{% if language.code == LANGUAGE_CODE %}
+                                selected{% endif %}>
+
+                                {% if language.name_local == "Қазақ" %}
+                                {{ language.name_local }}ша
+
+                                {% endif %}
+                                {% if language.name_local == "Русский" %}
+                                {{ language.name_local }}
+                                {% endif %}
+                                </option>
+                        {% endfor %}
+
+                        </select>
+                    <input type="submit", value="Перевести" style="margin-top: 5px;">
+                    </form>
+                  </li>
+                </ul>
+
+              </div>
+            </div>
+          </nav>
+
+
+		<!-- Banner -->
+			<section class="banner full">
+
+				<article>
+					<img src="{% static 'images/p4.jpg' %}"  alt="" />
+					<div class="inner">
+						<header>
+							<p style="
+    font-size: 20px; padding-top: 50px;">Поднимись в сфере цифровизации</p>
+							<h2>Вместе с нами</h2>
+						</header>
+					</div>
+				</article>
+
+			</section>
+
+
+
+
+		<!-- Two -->
+			<section id="two" class="wrapper style3">
+				<div class="inner">
+					<header class="align-center">
+						<h2 style="margin-top: 60px; font-family: sans-serif;">SUCCESS STARTS HERE</h2>
+					</header>
+				</div>
+			</section>
+
+		<section class="our-team" id = "prep">
+    <div class="ot-top">
+      <h1>Наша команда</h1>
+      <p style="font-size: 20px; font-weight: bold;">Представляем наших наставников и сотрудников!</p>
+    </div>
+    <div class="container">
+      <div class="row">
+    <div class="col-md-4">
+          <div class="single-team-member">
+           <div class="stm-img wow fadeInUp" data-wow-delay=".3s">
+
+               <img src="{% static 'assets/img/team/Tahirzhan.jpg' %}" alt="">
+            </div>
+              <div class="stm-text wow fadeInDown" data-wow-delay=".8s">
+                <h4>Баратов Тахиржан</h4>
+                <p>Исполнительный директор</p>
+              </div>
+            </a>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="single-team-member">
+            <div class="stm-img wow fadeInUp" data-wow-delay=".3s">
+             <img src="{% static 'assets/img/team/prep1.jpeg' %}" alt="">
+
+            </div>
+            <a href="#">
+              <div class="stm-text wow fadeInDown" data-wow-delay=".5s">
+                <h4>Алтынбекова Загипа</h4>
+                <p>Заведующий учебной частью</p>
+              </div>
+            </a>
+          </div>
+        </div>
+
+    <div class="col-md-4">
+          <div class="single-team-member">
+            <div class="stm-img wow fadeInUp" data-wow-delay="1s">
+              <img src="{% static 'assets/img/team/Nurgai Aga.jpg' %}" alt="">
+
+            </div>
+            <a href="#">
+              <div class="stm-text wow fadeInDown" data-wow-delay="1.2s">
+                <h4>Ахметов Нурғали</h4>
+                 <p>Региональный директор</p>
+              </div>
+            </a>
+          </div>
+        </div>
+    <div class="col-md-4">
+          <div class="single-team-member">
+            <div class="stm-img wow fadeInUp" data-wow-delay=".3s">
+             <img src="{% static 'assets/img/team/Nurgul1.jpg' %}" alt="">
+
+            </div>
+            <a href="#">
+              <div class="stm-text wow fadeInDown" data-wow-delay=".5s">
+                <h4>Оразбаева Нургуль</h4>
+                 <p>Руководитель HR-отдела</p>
+              </div>
+            </a>
+          </div>
+        </div>
+    <div class="col-md-4">
+          <div class="single-team-member">
+            <div class="stm-img wow fadeInUp" data-wow-delay=".3s">
+             <img src="{% static 'assets/img/team/Islam.S1.jpg' %}" alt="">
+
+            </div>
+            <a href="#">
+              <div class="stm-text wow fadeInDown" data-wow-delay=".5s">
+                <h4>Садыкжанов Ислам</h4>
+                 <p>Руководитель Арт-отдела</p>
+              </div>
+            </a>
+          </div>
+        </div>
+
+
+
+    <div class="col-md-4">
+          <div class="single-team-member">
+            <div class="stm-img wow fadeInUp" data-wow-delay="1s">
+              <img src="{% static 'assets/img/team/Dilmurat.jpg' %}" alt="">
+
+            </div>
+            <a href="#">
+              <div class="stm-text wow fadeInDown" data-wow-delay="1.2s">
+                <h4>Ибрагимов Дильмурат</h4>
+                 <p>Руководитель IT-отдела</p>
+              </div>
+            </a>
+          </div>
+        </div>
+
+    <div class="col-md-4">
+          <div class="single-team-member">
+            <div class="stm-img wow fadeInUp" data-wow-delay=".3s">
+             <img src="{% static 'assets/img/team/Nikita.png' %}" alt="">
+
+            </div>
+            <a href="#">
+              <div class="stm-text wow fadeInDown" data-wow-delay=".5s">
+                <h4>Роганов Никита</h4>
+                 <p>Менеджер по продажам</p>
+              </div>
+            </a>
+          </div>
+        </div>
+
+    <div class="col-md-4">
+          <div class="single-team-member">
+            <div class="stm-img wow fadeInUp" data-wow-delay=".3s">
+             <img src="{% static 'assets/img/team/Shaha.jpg' %}" alt="">
+
+            </div>
+            <a href="#">
+              <div class="stm-text wow fadeInDown" data-wow-delay=".5s">
+                <h4>Давлетова Шахризат</h4>
+                 <p>Руководитель отдела продаж</p>
+              </div>
+            </a>
+          </div>
+        </div>
+
+    <div class="col-md-4">
+          <div class="single-team-member">
+            <div class="stm-img wow fadeInUp" data-wow-delay=".3s">
+             <img src="{% static 'assets/img/team/Kudryat.png' %}" alt="">
+
+            </div>
+            <a href="#">
+              <div class="stm-text wow fadeInDown" data-wow-delay=".5s">
+                <h4>Турганов Кудрят</h4>
+                 <p>Менеджер по продажам</p>
+              </div>
+            </a>
+          </div>
+        </div>
+
+    <div class="col-md-4">
+          <div class="single-team-member">
+            <div class="stm-img wow fadeInUp" data-wow-delay=".3s">
+             <img src="{% static 'assets/img/team/Uliana.jpg' %}" alt="">
+
+            </div>
+            <a href="#">
+              <div class="stm-text wow fadeInDown" data-wow-delay=".5s">
+                <h4>Усьянцева Ульяна</h4>
+                 <p>Финансовый менеджер</p>
+              </div>
+            </a>
+          </div>
+        </div>
+
+    <div class="col-md-4">
+          <div class="single-team-member">
+            <div class="stm-img wow fadeInUp" data-wow-delay=".3s">
+             <img src="{% static 'assets/img/team/Danil.jpg' %}" alt="">
+
+            </div>
+            <a href="#">
+              <div class="stm-text wow fadeInDown" data-wow-delay=".5s">
+                <h4>Зорин Данил</h4>
+                 <p>IT-специалист</p>
+              </div>
+            </a>
+          </div>
+        </div>
+
+    <div class="col-md-4">
+          <div class="single-team-member">
+            <div class="stm-img wow fadeInUp" data-wow-delay=".3s">
+             <img src="{% static 'assets/img/team/Nuriev.jpg' %}" alt="">
+
+            </div>
+            <a href="#">
+              <div class="stm-text wow fadeInDown" data-wow-delay=".5s">
+                <h4>Нуриев Рамазан</h4>
+                 <p>Наставник</p>
+              </div>
+            </a>
+          </div>
+        </div>
+
+    <div class="col-md-4">
+          <div class="single-team-member">
+            <div class="stm-img wow fadeInUp" data-wow-delay=".3s">
+             <img src="{% static 'assets/img/team/Aidos.jpg' %}" alt="">
+
+            </div>
+            <a href="#">
+              <div class="stm-text wow fadeInDown" data-wow-delay=".5s">
+                <h4>Тусипов Айдос</h4>
+                 <p>Наставник</p>
+              </div>
+            </a>
+          </div>
+        </div>
+
+    <div class="col-md-4">
+          <div class="single-team-member">
+            <div class="stm-img wow fadeInUp" data-wow-delay=".3s">
+             <img src="{% static 'assets/img/team/Baratov.jpg' %}" alt="">
+
+            </div>
+            <a href="#">
+              <div class="stm-text wow fadeInDown" data-wow-delay=".5s">
+                <h4>Баратов Илимжан</h4>
+                 <p>Наставник</p>
+              </div>
+            </a>
+          </div>
+        </div>
+
+
+
+
+
+
+
+   </div>
+    </div>
+  </section>
+
+		<!-- Three -->
+			<section id="three" class="wrapper style2">
+				<div class="inner">
+					<header class="align-center">
+						<p class="special" style="color: #4c4c4c;">Высококвалифицированные специалисты</p>
+						<h2>Elab.asia</h2>
+					</header>
+					<!--<div class="gallery">
+						<div>
+							<div class="image fit">
+								<a href="#"><img src="images/pic01.jpg" alt="" /></a>
+							</div>
+						</div>
+						<div>
+							<div class="image fit">
+								<a href="#"><img src="images/pic022.jpg" alt="" /></a>
+							</div>
+						</div>
+						<div>
+							<div class="image fit">
+								<a href="#"><img src="images/pic03.jpg" alt="" /></a>
+							</div>
+						</div>
+						<div>
+							<div class="image fit">
+								<a href="#"><img src="images/pic04.jpg" alt="" /></a>
+							</div>
+						</div>
+					</div>-->
+				</div>
+			</section>
+		
+		
+
+
+		<!-- Footer -->
+			<!-- Footer -->
+
+		<footer class="page-footer font-small blue-grey lighten-5" style="background: #000000;">
+
+  <div style="background-color: #0b786f;">
+    <div class="container">
+
+      <!-- Grid row-->
+      <div class="row py-4 d-flex align-items-center">
+
+        <!-- Grid column -->
+        <div class="col-md-6 col-lg-5 text-center text-md-left mb-4 mb-md-0">
+          <h6 class="mb-0" style="font-size: 25px; color: white; margin-left: -40px;">Следите за нами в социальных сетях!</h6>
+        </div>
+        <!-- Grid column -->
+
+        <!-- Grid column -->
+        <div class="col-md-6 col-lg-7 text-center text-md-right">
+
+		  <!--Instagram-->
+          <a class="ins-ic" href="https://www.instagram.com/elab.asia_digital_academy/?igshid=1xjm90frp1chj" target="_blank">
+            <i class="fa fa-instagram white-text" style="margin-left: 20px; font-size: 50px;"> </i>
+          </a>
+          <!--youtube -->
+          <a class="li-ic" href="https://www.youtube.com/channel/UCjwLOs7tgaZ1ArqTv10r8Zw" target="_blank">
+            <i class="fa fa-youtube white-text mr-4" style="margin-left: 20px; font-size: 50px;"> </i>
+          </a>
+          <!-- Facebook -->
+          <a class="fb-ic" href="https://www.facebook.com/elabasia_digital_academy-105324734595469/" target="_blank">
+            <i class="fa fa-facebook-f white-text mr-4" style="margin-left: 20px; font-size: 50px;"> </i>
+          </a>
+
+        </div>
+        <!-- Grid column -->
+
+      </div>
+      <!-- Grid row-->
+
+    </div>
+  </div>
+
+  <!-- Footer Links -->
+  <div class="container text-center text-md-left mt-5">
+
+    <!-- Grid row -->
+    <div class="row mt-3 dark-grey-text">
+
+      <!-- Grid column -->
+      <div class="col-md-3 col-lg-4 col-xl-3 mb-4">
+
+        <!-- Content -->
+        <h6 class="text-uppercase font-weight-bold" style="color: white; font-size: 20px;">ELAB.ASIA</h6>
+        <hr class="teal accent-3 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px; color: white;">
+        <p style="color: white;">Мир новых знаний.</p>
+
+      </div>
+      <!-- Grid column -->
+
+      <!-- Grid column -->
+      <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+
+        <!-- Links -->
+        <!--<h6 class="text-uppercase font-weight-bold">Products</h6>
+        <hr class="teal accent-3 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
+        <p>
+          <a class="dark-grey-text" href="#!">MDBootstrap</a>
+        </p>
+        <p>
+          <a class="dark-grey-text" href="#!">MDWordPress</a>
+        </p>
+        <p>
+          <a class="dark-grey-text" href="#!">BrandFlow</a>
+        </p>
+        <p>
+          <a class="dark-grey-text" href="#!">Bootstrap Angular</a>
+        </p>-->
+
+      </div>
+      <!-- Grid column -->
+
+      <!-- Grid column -->
+      <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+
+        <!-- Links -->
+        <!--<h6 class="text-uppercase font-weight-bold">Useful links</h6>
+        <hr class="teal accent-3 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
+        <p>
+          <a class="dark-grey-text" href="#!">Your Account</a>
+        </p>
+        <p>
+          <a class="dark-grey-text" href="#!">Become an Affiliate</a>
+        </p>
+        <p>
+          <a class="dark-grey-text" href="#!">Shipping Rates</a>
+        </p>
+        <p>
+          <a class="dark-grey-text" href="#!">Help</a>
+        </p>-->
+
+      </div>
+      <!-- Grid column -->
+
+      <!-- Grid column -->
+      <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+
+        <!-- Links -->
+        <h6 class="text-uppercase font-weight-bold" style="color: white; font-size: 20px;">Наши контакты</h6>
+        <hr class="teal accent-3 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
+
+        <p style="color: white;">
+          <i class="fa fa-envelope mr-3" style="color: white;"></i> elab.shakha@gmail.com</p>
+        <p style="color: white;">
+          <i class="fa fa-phone mr-3" style="color: white;"></i> + 7 (776) 149 2925 - Шахризат</p>
+
+
+      </div>
+      <!-- Grid column -->
+
+    </div>
+    <!-- Grid row -->
+
+  </div>
+  <!-- Footer Links -->
+
+  <!-- Copyright -->
+  <div class="footer-copyright text-center text-black-50 py-3" style="margin-top: 20px; color: white;"><p style="color: white;">© 2020 Copyright: Elab.Asia</p>
+  </div>
+  <!-- Copyright -->
+
+</footer>
+
+		<!-- Scripts -->
+			<script src="{% static 'assets.main/js/jquery.min.js' %}"></script>
+			<script src="{% static 'assets.main/js/jquery.scrollex.min.js' %}"></script>
+			<script src="{% static 'assets.main/js/skel.min.js' %}"></script>
+			<script src="{% static 'assets.main/js/util.js' %}"></script>
+			<script src="{% static 'assets.main/js/main.js' %}"></script>
+
+	</body>
+</html>

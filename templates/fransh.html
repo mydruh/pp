@@ -1,0 +1,622 @@
+{% load static %}
+{% load i18n static %}
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>ELAB ASIA</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link rel="icon" href="https://elab.asia/img/icon.png">
+		<link rel="stylesheet" href="{% static 'assets.main/css/main.css' %}" />
+		<link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+		<link rel="stylesheet" href="{% static 'css/mdb.min.css' %}">
+  		<link rel="stylesheet" href="{% static 'assets/css/style.css' %}">
+		<link rel="stylesheet" type="text/css" href="{% static 'css/slider.css' %}">
+
+
+		<script type="text/javascript" src="{% static 'js/jquery.min.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/popper.min.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/bootstrap.min.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/mdb.min.js' %}"></script>
+
+	</head>
+	<body> 
+		
+		<style>
+			
+		p {
+			font-family: sans-serif;
+}
+			
+		strong {
+    	font-weight: 500;
+		color: white;
+}
+			
+		section.about-section .amout-img {
+   		position: relative;
+    	top: 50px;
+		text-align: center;
+}
+			
+		section.about-section {
+    	position: relative;
+		background: #f2f2f2;
+    	padding-top: 140px;
+    	overflow: hidden;
+}
+			
+			section.about-section {
+    position: relative;
+    background: #f2f2f2;
+    padding-top: 20px;
+    overflow: hidden;
+}
+			
+		a.btn-2:hover {
+    	transition: .5s ease;
+    	background-color: #12b3a6  !important; 
+
+}
+
+			.btn:hover {
+    background: #14d0c0;
+    color: #da513d;
+}
+		.pulse-css {
+    	width: 65px;
+    	height: 65px;
+    	border-radius: 50%;
+    	background: #d02121;
+    	position: relative;
+    	margin: 25px auto;
+    	z-index: 1;
+}
+		.pulse-css:before, .pulse-css:after {
+    	content: "";
+    	width: 65px;
+    	height: 65px;
+    	border-radius: 50%;
+    	background-color: #d02121;
+    	position: absolute;
+    	top: 0;
+    	right: 0;
+    	bottom: 0;
+    	left: 0;
+    	margin: auto;
+    	transform: scale(0.5);
+    	transform-origin: center center;
+    	-webkit-animation: pulse-btn 3s linear infinite;
+    	-moz-animation: pulse-btn 3s linear infinite;
+   	 	-ms-animation: pulse-btn 3s linear infinite;
+   	 	animation: pulse-btn 3s linear infinite;
+   	 	z-index: -1;
+}
+			
+
+
+			
+			section.about-section::before {
+    position: absolute;
+    content: '';
+    width: 350px;
+    height: 460px;
+    background: url({% static '/img/slide/slide-element1.png' %});
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    top: -25%;
+    left: -10%;
+    -webkit-animation-name: slideInnew3;
+    animation-name: slideInnew3;
+    -webkit-animation: slideInnew3 4s both alternate infinite;
+    animation: slideInnew3 4s both alternate infinite;
+    animation-duration: 6000ms;
+    animation-delay: 2s;
+    animation-timing-function: ease-in;
+}
+			
+			.wrapper.style2 header p {
+    color: #999999;
+    font-size: 20px;
+}
+			
+			.wrapper.style2 {
+background: linear-gradient(90deg, rgba(0,27,41,1) 0%, rgba(0,0,0,1) 50%, rgba(0,27,41,1) 100%);
+				color: #a6a6a6;
+}
+			
+			.wrapper.style3 header p {
+    color: #999999;
+    font-size: 20px;
+}
+			
+			.wrapper.style3 {
+			background-color: #000;
+			color: #bfbfbf;
+			background-image: url(../../images/soc.jpg);
+			background-size: cover;
+			background-attachment: fixed;
+			background-position: center;
+			height: 300px;
+			position: relative;
+		}
+			
+			.banner > article h2 {
+    font-size: 7rem;
+    padding-top: 20px;
+    margin-bottom: 0;
+    color: #FFF;
+    font-weight: 300;
+}
+			
+			.banner > article:after {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: #0000;
+    opacity: 0.35;
+}
+			.banner > article .inner {
+    position: relative;
+    display: inline-block;
+    padding-left: 200px;
+    vertical-align: top;
+    margin-top: 150px;
+    z-index: 1;
+}
+			
+			ul.icons li .icon:before {
+    font-size: 30px;
+}
+			
+.gallery .image {
+    background: #FFF;
+    padding: initial;
+}
+				@media only screen and (max-width: 1199px)
+		section.about-section::before {
+    	width: 0;
+    	height: 320px;
+}
+			
+
+
+			
+@media screen and (max-width:986px) {
+	.banner > article .inner {
+    position: relative;
+    display: inline-block;
+    padding-left: 0px;
+    vertical-align: top;
+    margin-top: 150px;
+    z-index: 1;
+}
+   h1 {
+	   visibility: hidden;
+}
+	label {
+	   visibility: hidden;
+}
+	p{
+	line-height: 1;	
+}
+}
+			
+			
+
+	@media screen and (max-width:1200px) {
+		.logon{
+		visibility: hidden;}
+}	
+
+			
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+			
+		</style>
+
+		<!-- Header -->
+
+
+		<!-- Nav -->
+		<nav class="navbar navbar-expand-lg navbar-dark fixed-top scrolling-navbar" style="padding-bottom: 30px;">
+            <div class="container">
+              <a class="navbar-brand" href="#">
+			  <img src="{% static 'img/ELAB.SOLUTIONS.png' %}" alt="" class="img-fluid" style = "max-width:250px;  cursor: auto;">
+              </a>
+              <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent-7" aria-controls="navbarSupportedContent-7" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+
+              <div class="collapse navbar-collapse" id="navbarSupportedContent-7">
+                <ul class="navbar-nav mr-auto">
+                  <li class="nav-item">
+                    <a class="nav-link" href="{% url 'home' %}" style="font-weight: bold;">Главная</a>
+                  </li>
+
+
+				  <li class="nav-item d-sm-none d-md-block" style="position: fixed;
+    right: 120px;">
+                    <form action="{% url 'set_language'%}" method="post" style="width: 100%;">
+                        {% csrf_token %}
+                        <input name="text" type="hidden" value="{{ redirect_to }}">
+                        <select name="language">
+                            {% get_current_language as LANGUAGE_CODE %}
+                            {% get_available_languages as LANGUAGES %}
+                            {% get_language_info_list for LANGUAGES as languages %}
+                            {% for language in languages %}
+                                <option  value="{{ language.code }}"{% if language.code == LANGUAGE_CODE %}
+                                selected{% endif %}>
+
+                                {% if language.name_local == "Қазақ" %}
+                                {{ language.name_local }}ша
+
+                                {% endif %}
+                                {% if language.name_local == "Русский" %}
+                                {{ language.name_local }}
+                                {% endif %}
+                                </option>
+                        {% endfor %}
+
+                        </select>
+                    <input class="translate" type="submit", value="Перевести" style="">
+                    </form>
+                  </li>
+                </ul>
+                
+              </div>
+            </div>
+			<div class="container">
+					<ul class="icons" style="padding-left: 350px;">
+						<li><a href="https://www.youtube.com/channel/UCjwLOs7tgaZ1ArqTv10r8Zw" class="icon fa-youtube" style="color: #fff;" target="_blank"><span class="label">Youtube</span></a></li>
+						<li><a href="https://www.facebook.com/elabasia_digital_academy-105324734595469/" class="icon fa-facebook" style="color: #fff;" target="_blank"><span class="label">Facebook</span></a></li>
+						<li><a href="https://www.instagram.com/elab.asia_digital_academy/?igshid=1xjm90frp1chj" class="icon fa-instagram" style="color: #fff;" target="_blank"><span class="label">Instagram</span></a></li>
+					</ul>
+				</div>
+          </nav>
+
+
+		<!-- Banner -->
+			<section class="banner full">
+				<article>
+					<img src="{% static 'images/f1.jpg' %}" alt="" />
+					<div class="inner">
+						<header>
+							<p style="
+    font-size: 20px; padding-top: 50px; color: #b5b5b5; font-weight: bold;">{% trans 'Добро пожаловать' %}</p>
+							<h2 style="font-weight: bold;">Elab Asia</h2>
+						<h1 style="
+    font-size: 20px; padding-top: 50px; color: #ffffff; font-size: 30px;">{% trans 'Новая прибыльная ниша.' %}</h1>
+							<h1 style="
+    font-size: 20px; font-size: 30px;
+    margin: -10px;
+    color: #ffffff;">{% trans 'Бизнес, который не требует крупных вложений.' %}</h1>
+							<h1 style="
+    font-size: 20px; font-size: 30px;
+    margin: -10px;
+    color: #ffffff;">{% trans 'Лучшее направление в сфере получения' %}</h1>
+							<h1 style="
+    font-size: 20px; font-size: 30px;
+    margin: -10px;
+    color: #ffffff;">{% trans 'цифровых знаний' %}</h1>
+							<h1 style="
+    font-size: 20px;; font-size: 30px;
+    margin: -10px;
+    color: #ffffff;"></h1>
+						</header>
+					</div>
+				</article>
+				
+				
+
+			</section>
+		<section id="two" class="wrapper style3">
+				<div class="inner">
+					<header class="align-center">
+						<h2 style="margin-top: 60px; font-family: sans-serif;">SUCCESS STARTS HERE</h2>
+					</header>
+				</div>
+			</section>
+		
+		
+		
+		<section class="about-section" style="background: linear-gradient(90deg, rgba(0,27,41,1) 0%, rgba(0,0,0,1) 50%, rgba(0,27,41,1) 100%);">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6">
+          <div class="amout-img">
+            <img src="{% static 'assets/img/about/prep22.png' %}" alt="">
+
+
+            <div class="bpw-btn" style="margin-top: -40px;">
+              <div class="pulse-box">
+                <div class="pulse-css">
+                  <a href="#" data-toggle="modal" data-target="#myModal2">
+                    <i class="fa fa-play" aria-hidden="true"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="about-content pt-2">
+            <h1 style="margin: 50px; font-family: sans-serif; color: #ffffff">{% trans 'Добро пожаловать в мир новых знаний' %}</h1>
+              <p>{% trans 'В современном стремительно  меняющемся мире всегда есть место личностному росту, получению новых знаний и движению в ногу со временем. Курсы нашей Академии позволят   Вам  работать в мире инновационных технологий, открывать для себя новые возможности в разных профессиях. Наши курсы одобрены НАЦИОНАЛЬНОЙ АКАДЕМИЕЙ ОБРАЗОВАНИЯ им. Ы.Алтынсарина. По окончании курсов Вы получаете  сертификат установленного образца, согласованный с Министерством науки и образования РК . Будьте вместе с нами. #бізбіргеміз' %}</p>
+			  <a href="#numbers" class="btn-2" style="position: relative;
+    color: #fff;
+	background-color: #0b786f;
+    font-family: sans-serif;
+    font-size: 16px;
+    padding: 20px 50px;
+    border-radius: 35px;
+    font-weight: 400;
+    text-transform: uppercase;
+    text-align: center;
+    letter-spacing: 0;
+	height: 10%;
+	bottom: 10px;
+    z-index: 1;
+    overflow: hidden;
+    display: inline-block;">Связаться с нами</a>
+
+          </div>
+        </div>
+		 
+		
+      </div>
+    </div>
+    
+
+  <!-- The Modal -->
+  <div class="modal" id="myModal2">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <!-- Modal Header -->
+        <div class="modal-header">
+          <button type="button" class="button ml-auto" id="pause-button" data-dismiss="modal"><i
+              class="fas fa-times v-close"></i></button>
+        </div>
+        <!-- Modal body -->
+        <div class="modal-body">
+          <div id="headerPopup">
+            <!-- Make sure ?enablejsapi=1 is on URL -->
+            <iframe src="https://www.youtube.com/embed/DvBP-ay1WRc?rel=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!--End The Modal -->
+  </section>
+
+		<!-- One -->
+			<!--<section id="one" class="wrapper style2">
+				<div class="inner">
+					<div class="grid-style">
+
+						<div>
+							<div class="box">
+								<div class="image fit">
+									<img src="images/pic02.jpg" alt="" />
+								</div>
+								<div class="content">
+									<header class="align-center">
+										<p>maecenas sapien feugiat ex purus</p>
+										<h2>Lorem ipsum dolor</h2>
+									</header>
+									<p> Cras aliquet urna ut sapien tincidunt, quis malesuada elit facilisis. Vestibulum sit amet tortor velit. Nam elementum nibh a libero pharetra elementum. Maecenas feugiat ex purus, quis volutpat lacus placerat malesuada.</p>
+									<footer class="align-center">
+										<a href="#" class="button alt">Learn More</a>
+									</footer>
+								</div>
+							</div>
+						</div>
+
+						<div>
+							<div class="box">
+								<div class="image fit">
+									<img src="images/pic03.jpg" alt="" />
+								</div>
+								<div class="content">
+									<header class="align-center">
+										<p>mattis elementum sapien pretium tellus</p>
+										<h2>Vestibulum sit amet</h2>
+									</header>
+									<p> Cras aliquet urna ut sapien tincidunt, quis malesuada elit facilisis. Vestibulum sit amet tortor velit. Nam elementum nibh a libero pharetra elementum. Maecenas feugiat ex purus, quis volutpat lacus placerat malesuada.</p>
+									<footer class="align-center">
+										<a href="#" class="button alt">Learn More</a>
+									</footer>
+								</div>
+							</div>
+						</div>
+
+					</div>
+				</div>
+			</section>-->
+
+		<!-- Two -->
+			<section id="two" class="wrapper style3">
+				<div class="inner">
+					<header class="align-center">
+						<h2 style="margin-top: 60px; font-family: sans-serif;">SUCCESS STARTS HERE</h2>
+					</header>
+				</div>
+			</section>
+		
+		<div class="all" style="background: linear-gradient(90deg, rgba(0,27,41,1) 0%, rgba(0,0,0,1) 50%, rgba(0,27,41,1) 100%);">
+		<input checked type="radio" name="respond" id="desktop">
+			<article id="slider">
+					<input checked type="radio" name="slider" id="switch1">
+					<input type="radio" name="slider" id="switch2">
+					<input type="radio" name="slider" id="switch3">
+					<input type="radio" name="slider" id="switch4">
+					<input type="radio" name="slider" id="switch5">
+
+
+
+				<div id="slides">
+					<div id="overflow">
+						<div class="image">
+							<article><img src="{% static 'img/1.png' %}"></article>
+							<article><img src="{% static 'img/5.png' %}"></article>
+							<article><img src="{% static 'img/6.png' %}"></article>
+							<article><img src="{% static 'img/8.png' %}"></article>
+							<article><img src="{% static 'v' %}"></article>
+
+
+						</div>
+					</div>
+				</div>
+				<div id="controls">
+					<label for="switch1"></label>
+					<label for="switch2"></label>
+					<label for="switch3"></label>
+					<label for="switch4"></label>
+					<label for="switch5"></label>
+
+				</div>
+				<div id="active">
+					<label for="switch1"></label>
+					<label for="switch2"></label>
+					<label for="switch3"></label>
+					<label for="switch4"></label>
+					<label for="switch5"></label>
+
+				</div>
+			</article>
+	</div>
+
+		<!-- Three -->
+			<section id="three" class="wrapper style2">
+				<section id="two" class="wrapper style3">
+				<div class="inner">
+					<header class="align-center">
+						<h2 style="margin-top: 60px; font-family: sans-serif;">SUCCESS STARTS HERE</h2>
+					</header>
+				</div>
+			</section>
+				
+				<!--<div class="all" style="background: linear-gradient(90deg, rgba(0,27,41,1) 0%, rgba(0,0,0,1) 50%, rgba(0,27,41,1) 100%);">
+		<input checked type="radio" name="respond" id="desktop">
+			<article id="sliderr" style="max-width: 800px;">
+					<input checked type="radio" name="sliderr" id="switch11">
+					<input type="radio" name="sliderr" id="switch22">
+					<input type="radio" name="sliderr" id="switch33">
+					<input type="radio" name="sliderr" id="switch44">
+					<input type="radio" name="sliderr" id="switch55">
+
+
+				<div id="slides">
+					<div id="overflow">
+						<div class="image">
+							<article><img src="img/m1.png"></article>
+							<article><img src="img/m2.png"></article>
+							<article><img src="img/m3.png"></article>
+							<article><img src="img/m4"></article>
+							<article><img src="img/m5"></article>
+
+
+						</div>
+					</div>
+				</div>
+				<div id="controls">
+					<label for="switch11"></label>
+					<label for="switch22"></label>
+					<label for="switch33"></label>
+					<label for="switch44"></label>
+					<label for="switch55"></label>
+
+				</div>
+				<div id="active">
+					<label for="switch11"></label>
+					<label for="switch22"></label>
+					<label for="switch33"></label>
+					<label for="switch44"></label>
+					<label for="switch55"></label>
+
+				</div>
+			</article>
+	</div> -->
+				
+				<article>
+					<div class="inner">
+						<header style="margin-left: 50px;">
+							<p style="
+    font-size: 40px; padding-top: 50px; color: #ffffff; font-weight: bold; font-style: italic;">ИНВЕСТИРУЙТЕ
+В ЦИФРОВОЙ БИЗНЕС
+</p>
+						<h1 style="
+    font-size: 20px; padding-top: 50px; color: #ffffff; font-size: 30px;">C высокой надёжностью, стабильным доходом и</h1>
+							<h1 style="
+    font-size: 20px; font-size: 30px;
+    margin: -10px;
+    color: #ffffff;">быстрой окупаемостью</h1>
+							<h1 style="
+    font-size: 20px; font-size: 30px;
+    margin: -10px;
+	margin-top: 50px;
+    color: #ffffff;">ДЕПАРТАМЕНТ ПАРТНЁРСКИХ РЕШЕНИЙ
+
+</h1>
+							<h1 style="
+    font-size: 20px; font-size: 30px;
+    margin: -10px;
+	margin-top: 10px;
+    color: #ffffff;">+ 7 (776) 149 2925, + 7 (707) 163 66 19</h1>
+							<h1 style="
+    font-size: 20px;; font-size: 30px;
+    margin: -10px;
+    margin-top: 30px;
+	color: #ffffff;">Давлетова Шахризат, Оразбаева Нургуль</h1>
+							<h1 style="
+    font-size: 20px;; font-size: 30px;
+    margin: -10px;
+	margin-top: 100px;
+    color: #ffffff;">ЭЛ. ПОЧТА:</h1>
+							<h1 style="
+    font-size: 20px;; font-size: 30px;
+    margin: -10px;
+    color: #ffffff;">elab.shakha@gmail.com / elab.nura@gmail.com</h1>
+				<div class="logon" style="text-align: right;">			
+			  <img src="https://elab.asia/img/ELAB.SOLUTIONS.png" alt="" class="img-fluid" style = "max-width:750px; margin-top: -600px;  cursor: auto;">
+				</div>
+						</header>
+					</div>
+				</article>
+					
+				
+				
+				
+			</section>
+
+
+		<!-- Footer -->
+			<footer id="footer">
+				<div class="container">
+					<ul class="icons">
+						<li><a href="https://www.youtube.com/channel/UCjwLOs7tgaZ1ArqTv10r8Zw" class="icon fa-youtube"><span class="label">Youtube</span></a></li>
+						<li><a href="https://www.facebook.com/elabasia_digital_academy-105324734595469/" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
+						<li><a href="https://www.instagram.com/elab.asia_digital_academy/?igshid=1xjm90frp1chj" class="icon fa-instagram"><span class="label">Instagram</span></a></li>
+					</ul>
+				</div>
+				<div class="copyright" style="font-family: sans-serif; font-size: 20px; padding-top: 20px;">
+					&copy; 2020 Copyright. Elab.asia
+				</div>
+
+			</footer>
+
+		<!-- Scripts -->
+			<script src="{% static 'assets.main/js/jquery.min.js' %}"></script>
+			<script src="{% static 'assets.main/js/jquery.scrollex.min.js' %}"></script>
+			<script src="{% static 'assets.main/js/skel.min.js' %}"></script>
+			<script src="{% static 'assets.main/js/util.js' %}"></script>
+			<script src="{% static 'assets.main/js/main.js' %}"></script>
+
+	</body>
+</html>

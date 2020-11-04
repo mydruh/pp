@@ -1,0 +1,173 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+<title>ELAB ASIA</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" href="https://elab.asia/img/icon.png">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap">
+<link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+<link rel="stylesheet" href="{% static 'css/mdb.min.css' %}">
+<link rel="stylesheet" href="{% static 'css/style.css' %}">
+
+<script type="text/javascript" src="{% static 'js/jquery.min.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/popper.min.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/bootstrap.min.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/mdb.min.js' %}"></script>
+</head>
+
+    <body class="body_hide">
+		<script >
+        setTimeout(function(){
+  document.body.classList.add('body_visible');
+}, 300);
+      </script>
+
+<style>
+.body_hide {
+  opacity: 0;
+  transition: .9s opacity ease-in-out;
+}
+.body_visible {
+  opacity: 1;
+}
+
+			.blue-grey.lighten-5 {
+    background-color: #000000 !important;
+}
+	.anim {
+	visibility: visible;
+    animation-name: fadeInLeft;
+    animation-delay: 0.3s;
+	}
+	
+	.zapis {
+	position: relative !important;
+	font-size: 20px;
+    font-family: inherit;	color: #fff;
+	background: linear-gradient(to left, #1b8dab, #0b786f, #1b8dab);
+	text-decoration: none;
+	padding: 20px 70px;
+	border-radius: 10px;
+	background-size: 200%;
+	transition: .5s;
+    color: #fff;
+    cursor: pointer;
+    text-decoration: none;
+    border-radius: 10px;
+    text-transform: uppercase;
+    font-weight: 400;
+    text-align: right;
+    letter-spacing: 0;
+    width: 30%;
+    height: 40px;
+    left: 250px;
+    top: -25px;
+    z-index: 1;
+    overflow: hidden;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    margin-left: 13%;
+	}
+	
+
+.zapis:hover {
+  background-position: right;
+}
+
+.btn-1{
+background: none;
+    color: white;
+    font-size: 20px;
+    border: 3px solid #62ad66;
+    border-radius: 10px;
+    padding: 5px;
+    padding-right: 10px;
+    padding-left: 10px;
+
+}
+		
+		</style>
+
+        <!-- Main navigation -->
+        <header>
+          <!--Navbar-->
+          
+          <!-- Full Page Intro -->
+          <div id = "top" class="view" style="background-image: url('https://elab.asia/img/elabmain3.jpg'); background-repeat: no-repeat; background-size: cover; background-position: center center;">
+            <!-- Mask & flexbox options-->
+            <div class="mask rgba-gradient align-items-center">
+              <!-- Content -->
+              <div class="container h-100">
+                <!--Grid row-->
+                <div class="row h-100" style="margin-top: -30px;">
+                  <!--Grid column-->
+                  <div class="col-md-12  my-auto white-text text-center wow fadeInLeft"  data-wow-delay="0.3s">
+                    <a class="btn btn-outline-white" href = "courses.html" style="font-size: 20px; margin-top: 30px">Вернуться назад</a>
+                    <h1 class="h1-responsive font-weight-bold mt-sm-5" style="font-size: 200%;">Уважаемый(ая) asd qwe!</h1>
+                    <hr class="hr-light">
+                    <h5 class="mb-4" style="font-size: 1rem;">Вы успешно зарегистрировались на курсы "Основы дистанционного обучения в РК" !</h5>
+                    <h6 class="mb-4" style="font-size: 1rem;">Ждем Вас на наших курсах! Elab.asia</h6>
+                    <h6 class="mb-4" style="font-size: 1rem;">Для оплаты посредством приложения Halyk банка, напишите в комментарие свой ИИН</h6>
+                    <br class="mb-4" style="font-size: 1rem;">Данные для оплаты:</br>
+                    <h6 class="mb-4" style="font-size: 1rem;">... тенге</h6>
+                    <h6 class="mb-4" style="font-size: 1rem;">Номер карточки: 4405 6397 9541 1378</h6>
+                    <h6 class="mb-4" style="font-size: 1rem;">ИИН: 020221600956</h6>
+                    <h6 class="mb-4" style="font-size: 1rem;">Или по номеру телефона : +77474596704
+
+</h6>
+                    
+<h5 class = "my-4">Выслать данные мне на почту</h5>
+   <form id = "sendme">
+   <div class="form-group  cfdb1" style="text-align: -webkit-center;">
+          <input type="email" class="form-control cp1" name = "email" placeholder = "Email" required style="width: 50%;">
+         
+        </div>
+    <div class="alert alert-success my-3 ml-4" id = "sent-alert" role="alert" style = "display:none">
+        Данные отправлены!
+    </div>
+    <input type = "hidden" name = "text">
+   <div class="form-group">
+        <button type = "submit" class="btn-1">Выслать
+    </button>
+      </div>
+   </form>
+                   
+                  </div>
+                  
+                </div>
+                <!--Grid row-->
+              </div>
+              <!-- Content -->
+            </div>
+            <!-- Mask & flexbox options-->
+          </div>
+          <!-- Full Page Intro -->
+        </header>
+        <!-- Main navigation -->
+
+        <!--Main Layout-->
+
+<!-- Footer -->
+
+		<footer class="page-footer font-small blue-grey lighten-5" style="background: #000000;">
+
+  
+
+  <!-- Footer Links -->
+  
+  <!-- Footer Links -->
+
+  <!-- Copyright -->
+  <div class="footer-copyright text-center text-black-50 py-3" style=" color: white;"><p style="color: white;">© 2020 Copyright: Elab.Asia</p>
+  </div>
+  <!-- Copyright -->
+
+</footer>
+</body>
+</html>

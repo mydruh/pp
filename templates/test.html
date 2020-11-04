@@ -1,0 +1,340 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>ELAB ASIA</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" href="https://elab.asia/img/icon.png">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap">
+<link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+<link rel="stylesheet" href="{% static 'css/mdb.min.css' %}">
+<link rel="stylesheet" href="{% static 'css/style.css' %}">
+
+
+<script type="text/javascript" src="{% static 'js/jquery.min.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/popper.min.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/bootstrap.min.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/mdb.min.js' %}"></script>
+
+</head>
+
+    <body class="body_hide">
+      <script >
+        setTimeout(function(){
+  document.body.classList.add('body_visible');
+}, 300);
+      </script>
+
+		<style>
+*, ::after, ::before {
+    box-sizing: border-box;
+    text-align: -webkit-center;
+}
+
+.body_hide {
+  opacity: 0;
+  transition: .9s opacity ease-in-out;
+}
+.body_visible {
+  opacity: 1;
+}
+
+html {
+scroll-behavior: smooth;
+background: rgb(5,13,31);
+background: linear-gradient(90deg, rgba(5,13,31,1) 0%, rgba(0,0,0,1) 50%, rgba(5,13,31,1) 100%);
+}
+
+
+
+li{    border: double;
+    border-radius: 20px;
+    margin: 15px;
+    padding: 10px;
+    font-size: 20px;
+    cursor: pointer;
+    width: 45%;
+}
+
+		.containerp {
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.containerp span{
+    text-transform: uppercase;
+    display: block;
+}
+
+			span{
+
+			font-size: 20px;
+			}
+
+.result{
+    color: #fff;
+    font-size: 20px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    margin-bottom: -23px;
+    background: #0000;
+    position: relative;
+    animation: text 5s 1;
+
+}
+
+.reload-button{
+margin-top: 20%;
+font-size: 30px;
+background: linear-gradient(135deg, #000000, #029797);
+border-radius: 10px;
+color: #ffffff;
+-webkit-transition: 0.3s ease;
+  transition: 0.3s ease;
+  -webkit-appearance: none;
+}
+
+.reload-button:hover {
+  background: #fff;
+  color: #029797;
+}
+
+.text2{
+    color: cadetblue;
+    font-size: 60px;
+    font-weight: 500;
+}
+
+@keyframes text{
+    0%{
+        color: #000;
+        margin-bottom: -100px;
+    }
+    30%{
+        letter-spacing: 25px;
+        margin-bottom: -100px;
+    }
+    85%{
+        letter-spacing: 8px;
+        margin-bottom: -100px;
+    }
+}
+
+
+.btn {
+  display: block;
+  padding: 1em 2em;
+  background: #0b786f;
+  color: #fff;
+  border: 1px solid #fff;
+  outline: 0;
+  text-transform: uppercase;
+  cursor: pointer;
+  -webkit-transition: 0.3s ease;
+  transition: 0.3s ease;
+  -webkit-appearance: none;
+}
+.btn:hover {
+  background: #fff;
+  color: #da513d;
+}
+.modal {
+  opacity: 0;
+  visibility: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.7);
+  -webkit-transition: 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
+}
+.modal__box {
+  padding: 1em;
+  background: #fff;
+  box-shadow: 0 0 10px 0 rgba(0,0,0,0.2);
+  text-align: center;
+  -webkit-transition: all 0.3s cubic-bezier(0.2, 0.9, 0.3, 1.5);
+  transition: all 0.3s cubic-bezier(0.2, 0.9, 0.3, 1.5);
+  -webkit-transform: rotate(5deg) translate(-1em, 1em);
+          transform: rotate(5deg) translate(-1em, 1em);
+  border-top: 5px solid #da513d;
+  border-bottom: 5px solid #ddd;
+}
+/* modal magic */
+.btn:focus + .modal {
+  opacity: 1;
+  visibility: visible;
+}
+.btn:focus + .modal .modal__box {
+  -webkit-transform: rotate(0deg) translate(0, 0);
+          transform: rotate(0deg) translate(0, 0);
+}
+			.blue-grey.lighten-5 {
+    background-color: #000000 !important;
+}
+
+.fullscreen-bg {
+    overflow: hidden;
+    z-index: -100;
+    position: static;
+    height: 100%;
+    width: 100%;
+}
+
+.fullscreen-bg__video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+.overlay {
+    background: rgba(0,0,0,0.6);
+    position: absolute;
+    top:0;
+    left:0;
+    width: 100%;
+    height: 100%;
+    z-index: 4;
+}
+.overlay h1 {
+    text-align:center;
+    color:#fff;
+    font-size: 70px;
+    margin-top:10%;
+}
+
+.result {
+  color: #ffffff;"
+}
+		</style>
+
+        <!-- Main navigation -->
+        <header>
+          <!--Navbar-->
+          <nav class="navbar navbar-expand-lg navbar-dark fixed-top scrolling-navbar">
+            <div class="container">
+              <a class="navbar-brand" href="index.html">
+			  <img src="{% static 'assets/img/LOGO4.png' %}" alt="" class="img-fluid" style = "max-width:68px">
+                <strong style="font-weight: bold;">ELAB.ASIA</strong>
+              </a>
+              <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent-7" aria-controls="navbarSupportedContent-7" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+			   <a href = "index.html" class = "selectlang  text-right d-block d-sm-none" style="font-weight: bold;">
+                Қазақша
+              </a>
+              <div class="collapse navbar-collapse" id="navbarSupportedContent-7">
+                <ul class="navbar-nav mr-auto">
+                  <p class="nav-item">
+                    <a class="nav-link" href="almaty.html" style="font-weight: bold;">Назад</a>
+                  </p>
+
+					<p class="nav-item active">
+                    <a class="nav-link" href="#top" style="font-weight: bold;">Алматы</a>
+					  <span class="sr-only">(current)</span>
+                  </p>
+				  <p class="nav-item d-sm-none d-md-block">
+                    <a class="nav-link" href="flash.php" style="font-weight: bold;"><?php if( $lang == 'ru' ){?>Қазақша<?php } else {?>Русский<?php }?></a>
+                  </p>
+                </ul>
+
+              </div>
+            </div>
+          </nav>
+          <!-- Full Page Intro -->
+          <div id = "top" class="view" style="height: 100%; background: black; background-repeat: no-repeat; background-size: cover; background-position: center center;">
+            <!-- Mask & flexbox options-->
+            <div class="fullscreen-bg">
+    <div class="overlay">
+<div class="test" style="    text-align: -webkit-center;">
+        <div class="site-header"></div>
+
+        <h1>Основы цифровизации</h1>
+        <main>
+
+            <div class="question" style="    color: #ffffff; "></div>
+            <ol class="answer" style="    color: #ffffff; "></ol>
+        </main>
+
+
+
+
+    <script src="{% static 'js/quiz_data.js' %}"></script>
+    <script src="{% static 'js/quiz_answer.js' %}" style="font-weight: 700;
+    letter-spacing: 8px;
+    margin-bottom: -23px;
+    background: #000;
+    position: relative;
+    animation: text 5s 1;"></script>
+    <script src="{% static 'js/quiz_code.js' %}"></script>
+    </div>
+  </div>
+    <video loop="" muted="" autoplay="" poster="{% static 'video/plane.jpg' %}" class="fullscreen-bg__video">
+        <source src="{% static 'img/video_bg.mp4' %}" type="video/mp4">
+
+    </video>
+</div>
+            <!-- Mask & flexbox options-->
+          </div>
+          <!-- Full Page Intro -->
+        </header>
+        <!-- Main navigation -->
+        <!--Main Layout-->
+
+        <!--Main Layout-->
+<!-- Footer -->
+
+<!-- Footer -->
+
+<div class="modal fade" id="requestform" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+  aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+	<form id = "signforcourse">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">Записаться на курс</h4>
+
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+
+      </div>
+	  <input type = "hidden" name = "coursename">
+      <div class="modal-body mx-3">
+	  <h4 class="text-center" id = "coursename"></h4>
+
+
+      </div>
+		<div class="modal-body mx-3">
+	  <h4 class="text-center">Внимание! На странице оплаты, в поле комментария, писать свой адрес доставки</h4>
+
+
+      </div>
+      <div class="modal-footer d-flex justify-content-center mb-5">
+        <a href="https://ecommerce.pult24.kz/invoice?id=11779657633628219" type = "submit" class="btn btn-outline-grey">Перейти к оплате</a>
+      </div>
+	  </form>
+    </div>
+  </div>
+</div>
+
+
+</body>
+</html>
